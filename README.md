@@ -1,2 +1,2 @@
-#aulas do segundo trimestre  
-beatris alessandra abe rodrigues  n-3
+#  aula do segundo trimestr  
+beatris alesandra abe rodrigues  n-3
