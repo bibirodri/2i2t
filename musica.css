@@ -55,6 +55,9 @@ body{
         display: flex;
         direction: ltr;
     }
+    .desc-solo{
+        display: flex;
+    }
     
 }
 
