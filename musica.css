@@ -1,76 +1,175 @@
-* {
+*{
     padding: 0;
-    margin: 0;
+margin: 0;
 }
+:root{
+    --fundo: pink;
+    --fonte: white;
+    --hover: rgba(241, 83, 241, 0.911);
 
+}
 body{
-    background-color: rgb(162, 0, 255);
+    background-color: pink;
+}
+a {
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+.menu{
+    background-color: var(--fundo);
+    width: 100%;
+    position: sticky;
+    top: 0;
+
+
 }
 
-.menu{
-    width: 100%;
-    height: 60%;
-    background-color: rgb(114, 250, 209);
+.logo{
+    display: inline-block;
+    color: var(--fonte);
+    font-size: 30px;
 }
-.conteudo-musica {
+
+.nav{
     width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: var(--fundo);
+    overflow: hidden;
 }
-.rodape {
+
+.nav a{
+    display: block;
+    padding: 30px;
+    color: var(--fonte);
+}
+
+nav a:hover{
+background-color: var(--hover);
+}
+
+.nav{
+  max-height: 0;
+  transition: max-height .5s ease-out;
+}
+
+.hamburger{
+    cursor: pointer;
+    float: right;
+    padding: 35px 20px;
+}
+
+.hamb-line{
+    background: var(--fonte);
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+
+}
+
+.hamb-line::before,
+.hamb-line::after{
+    background: var(--fonte);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all 2s ease-out;
     width: 100%;
-    background-color: rgb(15, 100, 185);
+
+}
+
+.hamb-line::before{
+    top: 5px;
+}
+.hamb-line::after{
+    top: -5px;
+}
+
+.side-menu{
+    display: none;
+}
+
+.side-menu:checked ~ nav {
+    max-width: 100%;
+
+}
+
+.side-menu:checked ~ .hamburger .hamb-line{
+    background: transparent;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.conteudo-musica{
+    width: 100%;
+    
+}
+.rodape{
+    width: 100%;
+    background-color: rgb(243, 155, 170);
     text-align: center;
 }
-.desc-estilo{
+.desc-estilos{
     width: 100%;
-    background-color: tan;
+    background-color: aquamarine;
 }
 .desc-solo{
     width: 100%;
-    background-color: teal;
+    background-color: palevioletred;
 }
-.desc-grupo {
+.desc-grupo{
     width: 100%;
-    background-color: tan;
+    background-color: aquamarine;
 }
-.desc-banda {
+.desc-bandas{
     width: 100%;
-    background-color: teal;
+    background-color: palevioletred;
 }
-.desc-app {
+.desc-app{
     width: 100%;
-    background-color: tan;
+    background-color: aquamarine;
 }
 .img-ini{
-    width:100%;
+    width: 100%;
 }
-@media screen and (min-width:768px) {
+@media screen and (min-width: 768px) {
     .menu{
-        height:120px;
-        background-color: aqua;
-        color: blue;
+        height: 120px;
+        background-color: rgb(202, 161, 240);  
+        color: antiquewhite;
         font-size: 32px;
-    
+      }
+      .conteudo{
+       display: flex;
+        
     }
-    .conteudo-musica {
-        display: flex;
-        direction: ltr;
-    }
-    .desc-solo{
-        display: flex;
-    }
-    
 }
-
-@media screen and (min-width:1280px) {
+@media screen and (min-width: 1280px) {
     .menu{
-        height: 200px;
-        background-color: aqua;
-        color: blue;
-        font-size: 64px;
-    
-    }
-    
-}
-.img-ini {
-width: 50px;
+        height: 120px;
+        background-color: rgb(206, 174, 236);  
+        color: black;
+        font-size: 50px;
+      }
+      .img-ini{
+        width: 50%;
+      }
+      .desc-solo{
+        display: grid;
+      }
 }
