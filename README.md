@@ -1,2 +1,2 @@
-#  aula do segundo trimestr  
-beatris alesandra abe rodrigues  n-3
+Aulas do segundo trimestre
+Nome:michelangelo Numero: 26
